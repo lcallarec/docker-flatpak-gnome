@@ -18,6 +18,6 @@ RUN apt install flatpak -y
 RUN flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
 
 # Clean
-RUB apt-get clean -y && apt-get autoclean -y
+RUN apt-get clean -y && apt-get autoclean -y
 
 CMD "/bin/bash"
