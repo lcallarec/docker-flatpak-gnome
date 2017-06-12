@@ -7,7 +7,7 @@ RUN apt-get update -y
 
 # Install base dependencies
 ## For add-apt-repository binary
-RUN apt-get install -y software-properties-common python-software-properties
+RUN apt-get install -y software-properties-common python-software-properties build-essential
 
 # Install flatpak
 RUN add-apt-repository ppa:alexlarsson/flatpak -y
@@ -20,4 +20,4 @@ RUN flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpak
 # Clean
 RUN apt-get clean -y && apt-get autoclean -y
 
-CMD "/bin/bash"
+CMD ["/bin/bash"]
